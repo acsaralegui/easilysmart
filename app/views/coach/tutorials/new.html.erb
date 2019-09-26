@@ -1,6 +1,9 @@
 <br />
-<div class="booyah-box col-10 offset-1">
-  <h1>Start a new tutorial</h1>
+<br />
+<div class="row">
+  <div class="col-lg-4 col-md-6 ml-auto mr-auto">
+    <h1 class="text-center">Start a new tutorial</h1>
+ 
    <%= simple_form_for @tutorial, url: coach_tutorials_path do |f| %>
     <%= f.input :title %>
     <%= f.select :System_type, ['Apple', 'Android'] %>
@@ -8,7 +11,7 @@
     <%= f.input :cost %>
     <%= f.input :image %>
     <br />
-    <%= f.submit "Create", class: 'btn btn-primary' %>
+    <%= f.submit "Create", class: "btn btn-outline-secondary btn-sm" %>
     <br />
   <% end %>
   <br />
