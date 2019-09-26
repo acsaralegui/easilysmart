@@ -1,0 +1,77 @@
+<br />
+
+<div class="booyah-box col-10 offset-1">
+  <h1><%= @tutorial.title %></h1>
+    <%= image_tag @tutorial.image.url, class: 'img-fluid' %>
+  <br />
+  <div class="row">
+    <div class="col-sm-4 col-12 text-center">
+      <h5><%= @tutorial.System_type %></h5>
+  
+      <div class="col-sm-8 col-12">
+        <span class="badge badge-default">
+          <%= number_to_currency @tutorial.cost %>
+        </span>
+
+      <% if current_user && current_user == @tutorial.user %>
+        <br />
+        <br />
+        <%= link_to 'Administer', coach_tutorial_path(@tutorial), class: 'btn btn-danger btn-large' %>
+      <% end %>
+
+      <br />
+      <br />
+
+      <% if current_user %>
+        <% if current_user && current_user.enrolled_in?(@tutorial) %>
+          <h3 class="badge badge-info">You Are Enrolled!</h3>
+        <% else %>
+          <% if @tutorial.free? %>
+            <%= link_to 'Enroll', tutorial_enrollments_path(@tutorial), class: 'btn btn-primary', method: :post %>
+          <% else %>
+            <%= form_tag tutorial_enrollments_path(@tutorial) do %>
+
+
+              <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                  data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                  data-email="<%= current_user.email %>"
+                  data-description="<%= @tutorial.title %> (<%= number_to_currency @tutorial.cost %>)"
+                  data-amount="<%= (@tutorial.cost * 100).to_i %>"
+                  data-locale="auto"></script>
+            <% end %>
+          <% end %>
+        <% end %>
+      <% else %>
+        <h3 class="badge badge-info"> Sign In to Enroll! </h3>
+      <% end %>
+    </div>
+    <div class="col-sm-8 col-12">
+      <%= @tutorial.description %>
+    </div>
+  </div>
+  <div class="col-12">
+    <% @tutorial.sections.each do |section| %>
+    <br /><br />
+      <div class="section">
+        <h3>
+          <%= section.title %>  
+        </h3>
+        <div class="row">
+          <% section.chapters.each do |chapter| %>
+            <div class="col-12 col-sm-6">
+              <div class="chapter text-center">
+                <br />
+                <%= link_to chapter_path(chapter) do %>
+                  <b><%= chapter.title %></b>
+                  <br />
+                  <%= chapter.subtitle %>
+                <% end %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+        <br class="clr" />
+      </div>
+    <% end %>
+  </div>
+</div>

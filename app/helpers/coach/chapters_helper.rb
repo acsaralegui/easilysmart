@@ -1,0 +1,2 @@
+module Coach::ChaptersHelper
+end

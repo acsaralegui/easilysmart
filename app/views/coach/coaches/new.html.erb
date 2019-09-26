@@ -1,0 +1,16 @@
+<br />
+<div class="booyah-box col-10 offset-1">
+  <h1>Become a coach</h1>
+  
+ <%= simple_form_for @coach, url: coach_coaches_path do |f| %>
+    <%= f.input :name %>
+    <%= f.input :bio %>
+    <%= f.select :System_type, ['Apple', 'Android'] %>
+    <%= f.input :description %>
+    <%= f.input :cost %>
+    <br />
+    <%= f.submit "Create", class: 'btn btn-primary' %>
+    <br />
+  <% end %>
+  <br />
+</div>

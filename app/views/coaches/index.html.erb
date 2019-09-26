@@ -1,0 +1,25 @@
+<br />
+
+<div class="col-6 offset-2 col-sm-4 offset-sm-2 col-md-5 offset-md-3">
+  <h1 class="text-center">Find your Coach</h1>
+  <br />
+
+   <% @coach.each do |coach| %>
+     <div class="card">
+      <h2 class="handle">
+        <%= link_to coach.name, coach_path(coach) %>   
+      </h2>
+      <br />
+      <div class="row">
+        <div class="col-sm-8 col-12">
+          
+        </div>
+        <div class="col-sm-8 col-16 text-center">
+          <%= link_to 'Details', coach_path(coach), class: 'btn btn-dark btn-sm' %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+

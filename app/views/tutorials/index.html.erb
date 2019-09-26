@@ -1,0 +1,29 @@
+<br />
+
+<div class="col-6 offset-2 col-sm-4 offset-sm-2 col-md-5 offset-md-3">
+  <h1 class="text-center">Learn something today</h1>
+  <br />
+  
+  <% @tutorial.each do |tutorial| %>
+    <div class="card">
+      <h2 class="handle">
+        <%=link_to tutorial.title, tutorial_path(tutorial) %></h2>
+        <%= image_tag tutorial.image.url.to_s, class: 'img-fluid' %>
+
+      <h5 class="gram-actions float-right">
+        <br class="clear-fix" />
+        <%= tutorial.System_type %>
+      </h5>
+      <br />
+      <div class="row">
+        <div class="col-sm-8 col-12">
+          <%= tutorial.description %>
+        </div>
+        <div class="col-sm-4 col-12 text-center">
+          <%= link_to 'Learn', tutorial_path(tutorial), class: 'btn btn-dark btn-sm' %>
+        </div>
+      </div>
+      <br class="clr" />
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,10 @@
+class CreateSections < ActiveRecord::Migration[5.2]
+  def change
+    create_table :sections do |t|
+      t.string :title
+      t.integer :tutorial_id
+      t.timestamps
+    end
+    add_index :sections, :tutorial_id
+  end
+end

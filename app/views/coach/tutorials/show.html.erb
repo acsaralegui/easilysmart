@@ -1,0 +1,31 @@
+<br />
+<div class="booyah-box col-10 offset-1">
+  <h1 class="text-center"><%= @current_tutorial.title %></h1>
+    <%= image_tag current_tutorial.image.url.to_s, class: 'img-fluid' %>
+  <br />
+  <%= link_to 'Preview As Student', tutorial_path(current_tutorial), class: 'btn btn-warning float-right' %>
+  <br class="clr" />
+
+  <div class="text-center">
+    <%= link_to 'Add a new section', new_coach_tutorial_section_path(current_tutorial), class: 'btn btn-primary btn-lg' %>
+  </div>
+
+  <ul>
+    <% current_tutorial.sections.each do |section| %>
+      <li>
+        <%= section.title %>
+        <%= link_to 'New Chapter', new_coach_section_chapter_path(section), class: 'float-right btn btn-primary btn-sm' %>
+        <ul>
+          <% section.chapters.each do |chapter| %></b>
+            <li>
+              <b><%= chapter.title %></b>
+              -
+              <%= chapter.subtitle %>
+            </li>
+          <% end %>
+        </ul>
+        <br class="clr" />
+      </li>
+    <% end %>
+  </ul>
+</div>

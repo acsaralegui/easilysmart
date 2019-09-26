@@ -1,0 +1,152 @@
+@import "bootstrap";
+
+.navbar{
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 300;
+  box-shadow: 0px 0.5px 5px #2a2a2a;
+  background: image_url('lightpaperfibers.png');
+}
+
+
+.hero {
+   background: image_url('iphone8.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 900px;
+  box-shadow: 0px 3px 8px #2a2a2a;
+}
+
+.hero2{
+  float: left;
+  width: 42.5%;
+  margin-left: 5%;
+  margin-top: 80px;
+ }
+
+h1, h2, h3, h4, h5, h6, .navbar {
+  margin: 0;
+}
+
+.frosty {
+  -webkit-animation-name: bounceOutUp;
+  animation-name: bounceOutUp;
+  font-family: 'Montserrat Alternates', sans-serif;
+  background: rgba(0, 0, 0, 0.0);
+  color: white;
+  padding:20px;
+  float:left;
+  width:80%; /* The width is 60%, by default */
+}
+
+.frosty h1 {
+  font-weight: 100;
+  text-shadow: rgba(0, 0, 0, 0.95) 2px 2px;
+}
+
+.frosty h2 {
+  font-weight: 200;
+  text-shadow: rgba(0, 0, 0, 1) 2px 2px;
+}
+
+.btn {
+  border-radius: 0;
+}
+
+.booyah-box {
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  padding: 10px;
+}
+
+.booyah-box h2, .booyah-box h1 {
+  margin: 10px;
+}
+
+.help-block {
+  color: #ff3333;
+  background-color: #FFEEEE;
+  border-radius: 3px;
+  padding: 2px 8px 2px 8px;
+  margin: 10px;
+}
+
+.clr {
+  clear: both;
+}
+
+.chapter {
+  background-color: grey;
+  margin-top: 10px;
+  height: 130px;
+}
+
+.section {
+  border: 1px solid;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  padding: 20px;
+}
+
+.chapter a {
+  color: white;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 100;
+  font-size: 15px;
+}
+
+.chapter a b{
+  font-weight: 100;
+  font-size: 25px;
+}
+
+.clear {
+    clear: both;
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote p {
+  display: inline;
+}
+.card {
+  background-color: #fff;
+  border-radius: .25rem;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  border: 1px solid #e8e8e8;
+  margin-top: 40px;
+  padding: 0;
+  float: left;
+  transition: all 1s;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.handle {
+  margin: 10px;
+  color: #125688;
+  font-weight: bold;
+  font-size: 18px;
+}
+
