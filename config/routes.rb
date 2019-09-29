@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'intro_pages#index'
+  get 'privacy', to: 'intro_pages#privacy'
+  get 'careers', to: 'intro_pages#careers'
+  get 'team', to: 'intro_pages#team'
   resources :coaches, only: [:index, :show] do
     resources :comments, only: :create
   end
