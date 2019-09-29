@@ -4,7 +4,7 @@
 
   <h3>User Dashboard</h3>
   <%= simple_form_for @user, url: user_path(@user) do |f| %>
-    <%= f.file_input :avatar %>
+    <%= f.input :avatar %>
     <br />
     <%= f.submit "Create", class: "btn btn-outline-secondary btn-sm" %>
     <br />
