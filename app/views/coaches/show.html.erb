@@ -26,6 +26,15 @@
             <%= number_to_currency @coach.cost %>
           </span>
         </div>
+        <%= form_tag coach_coach_path do %>
+          
+
+          <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                  data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                  data-description="A month's subscription"
+                  data-amount="500"
+                  data-locale="auto"></script>
+        <% end %>
       </div>
     </div>
   </div>
