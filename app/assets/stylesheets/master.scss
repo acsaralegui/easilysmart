@@ -1,9 +1,6 @@
 @import "bootstrap";
 
 .navbar{
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem 2rem;
   font-family: 'Montserrat Alternates', sans-serif;
   font-weight: 300;
   box-shadow: 0px 0.5px 5px #2a2a2a;
@@ -144,12 +141,16 @@ blockquote p {
 .card {
   background-color: #fff;
   border-radius: .25rem;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.25);
   border: 1px solid #e8e8e8;
   margin-top: 40px;
   padding: 0;
   float: left;
   transition: all 1s;
+}
+
+.card.form {
+  padding: 20px;
 }
 
 .card:hover {
@@ -161,5 +162,12 @@ blockquote p {
   color: #125688;
   font-weight: bold;
   font-size: 18px;
+}
+
+.gram-actions a {
+  font-weight: bold;
+  font-size: 16px;
+  margin-right: 20px;
+  margin-left: auto;
 }
 
