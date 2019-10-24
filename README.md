@@ -1,24 +1,24 @@
-# README
+# easilysmart 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+This application is built by using Ruby on Rails, Javascript, and jQuery.
+This project allows the user to create tutorials to help people that need guidance with their smartphone. This project also allows user to become a coach to give one on one lessons.
+Here is a live feed of the website. [here](https://easilysmart-saralegui.herokuapp.com) If you would like to create a account and try, go right ahead.
 
-* Ruby version
 
-* System dependencies
+# Features: 
 
-* Configuration
+* Contains a Stripe API which is a secure payment method
 
-* Database creation
+* Devise is used for user authentication and sign-in forms, could be used for email as well.
 
-* Database initialization
+* Carrierwave is used for aws.
 
-* How to run the test suite
+* Bootstrap is also used in this application
 
-* Services (job queues, cache servers, search engines, etc.)
+* Postgresql is the database that is being used in this application.
 
-* Deployment instructions
 
-* ...
+
+<img src="images/screenshot.jpg">
+

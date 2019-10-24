@@ -4,7 +4,12 @@
 
   <h3>User Dashboard</h3>
   
-   
+<% form_for @user,url: user_path do |f| %>
+<p>
+  <% f.file_field :avatar %>
+</p>
+<p><% f.submit %></p>
+<% end %>
   
 
 
